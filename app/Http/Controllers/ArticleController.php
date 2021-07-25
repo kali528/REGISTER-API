@@ -33,7 +33,7 @@ class ArticleController extends Controller
             'content'   => 'required|string',
         ]);
 
-        $inputs['author'] = auth()->user()->email;
+        $inputs['author'] = auth()->user()->name;
         
         return Article::create( $inputs );
     }
